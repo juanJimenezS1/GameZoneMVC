@@ -1,0 +1,158 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+
+body {
+    background-color: #0b1020;
+    color: #f4f7ff;
+}
+
+.navbar {
+    background-color: #111a30 !important;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: #f4f7ff !important;
+}
+
+.navbar .nav-link:hover {
+    color: #39d9ff !important;
+}
+
+.game-hero {
+    background: linear-gradient(135deg, #172554, #312e81, #111827);
+    color: white;
+    border: 1px solid #33446d;
+}
+
+.game-hero .lead {
+    color: #dbeafe;
+}
+
+.game-symbol {
+    font-size: 100px;
+    filter: drop-shadow(0 0 18px #39d9ff);
+}
+
+.game-card,
+.game-form-card {
+    background-color: #141d32;
+    color: #f4f7ff;
+    border: 1px solid #2c3b59;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.game-card {
+    transition: transform 0.25s, border-color 0.25s;
+}
+
+.game-card:hover {
+    transform: translateY(-6px);
+    border-color: #39d9ff;
+}
+
+.game-card-top {
+    min-height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1e3a8a, #581c87);
+}
+
+.game-controller {
+    font-size: 60px;
+}
+
+.game-badge {
+    background-color: #164e63;
+    color: #a5f3fc;
+}
+
+.game-price {
+    color: #67e8f9;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.form-container {
+    max-width: 750px;
+}
+
+.game-form-card .form-control,
+.game-form-card .form-select {
+    background-color: #0b1020;
+    color: #f4f7ff;
+    border-color: #354563;
+}
+
+.game-form-card .form-control::placeholder {
+    color: #9baac5;
+}
+
+.game-form-card .form-select option {
+    background-color: #141d32;
+    color: #f4f7ff;
+}
+
+.game-form-card .form-control:focus,
+.game-form-card .form-select:focus {
+    border-color: #39d9ff;
+    box-shadow: 0 0 0 0.2rem rgb(57 217 255 / 20%);
+}
+
+.btn-info {
+    background-color: #39d9ff;
+    border-color: #39d9ff;
+    color: #07111f;
+}
+
+.btn-info:hover {
+    background-color: #8beaff;
+    border-color: #8beaff;
+    color: #07111f;
+}
+
+.text-secondary {
+    color: #aab8d0 !important;
+}
+
+@media (max-width: 576px) {
+    .game-symbol {
+        font-size: 75px;
+    }
+
+    .game-hero h1 {
+        font-size: 2.3rem;
+    }
+}

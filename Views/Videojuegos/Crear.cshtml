@@ -1,0 +1,81 @@
+
+@model GameZoneMVC.Models.Videojuego
+
+@{
+    ViewData["Title"] = "Registrar videojuego";
+}
+
+<div class="form-container mx-auto">
+    <div class="mb-4">
+        <a asp-controller="Videojuegos" asp-action="Index"
+           class="btn btn-outline-info mb-3">
+            ← Volver al catálogo
+        </a>
+
+        <h1 class="fw-bold">Registrar videojuego</h1>
+        <p class="text-secondary">
+            Completa la información para agregar un nuevo juego a GameZone.
+        </p>
+    </div>
+
+    <div class="card game-form-card">
+        <div class="card-body p-4 p-md-5">
+            <form asp-controller="Videojuegos" asp-action="Crear" method="post">
+                <div asp-validation-summary="ModelOnly"
+                     class="text-danger mb-3"></div>
+
+                <div class="mb-3">
+                    <label asp-for="Nombre" class="form-label">Nombre del videojuego</label>
+                    <input asp-for="Nombre" class="form-control"
+                           placeholder="Ejemplo: Minecraft" />
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Genero" class="form-label">Género</label>
+                    <select asp-for="Genero" class="form-select">
+                        <option value="">Selecciona un género</option>
+                        <option value="Accion">Acción</option>
+                        <option value="Aventura">Aventura</option>
+                        <option value="Deportes">Deportes</option>
+                        <option value="Battle Royale">Battle Royale</option>
+                        <option value="Carreras">Carreras</option>
+                        <option value="Estrategia">Estrategia</option>
+                        <option value="Simulacion">Simulación</option>
+                    </select>
+                    <span asp-validation-for="Genero" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Plataforma" class="form-label">Plataforma</label>
+                    <input asp-for="Plataforma" class="form-control"
+                           placeholder="Ejemplo: PC, PlayStation o Xbox" />
+                    <span asp-validation-for="Plataforma" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Precio" class="form-label">Precio en pesos colombianos</label>
+                    <input asp-for="Precio" type="number" min="0" max="1000000"
+                           step="0.01" class="form-control"
+                           placeholder="Ejemplo: 90000" />
+                    <span asp-validation-for="Precio" class="text-danger"></span>
+                </div>
+
+                <div class="mb-4">
+                    <label asp-for="Descripcion" class="form-label">Descripción</label>
+                    <textarea asp-for="Descripcion" class="form-control" rows="4"
+                              placeholder="Describe brevemente el videojuego"></textarea>
+                    <span asp-validation-for="Descripcion" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-info btn-lg w-100 fw-bold">
+                    Guardar videojuego
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
